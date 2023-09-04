@@ -117,6 +117,7 @@ const HomeCover = () => (
 
 const SettingsListItem = () => {
 	const { setTheme } = useTheme()
+	const [isHovered, setIsHovered] = useState(false)
 
 	const handleModeSelect = (mode: ColorModes) => () => {
 		setTheme(mode)
@@ -132,7 +133,6 @@ const SettingsListItem = () => {
 			<SubListContent>
 				{colorModes.map((colorMode) => {
 					const { title, mode, Icon } = colorMode
-					const [isHovered, setIsHovered] = useState(false)
 					const handleOnMouseEnter = () => setIsHovered(true)
 					const handleOnMouseLeave = () => setIsHovered(false)
 

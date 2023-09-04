@@ -138,13 +138,13 @@ const listItemLinkClass =
 	'block select-none m-3 rounded-2xl p-6 leading-none no-underline outline-none transition-colors hover:bg-accent/50 dark:hover:bg-secondary/5 hover:text-accent-foreground hover:text-bold focus:bg-accent focus:text-accent-foreground'
 
 const icons = new Map([
-	['users', <UsersIcon />],
-	['about', <BadgeIcon />],
-	['contact', <SendIcon />],
-	['reviews', <MessagesIcon />],
-	['enquire', <SearchCheckIcon />],
-	['pricing', <BadgePercentIcon />],
-	['book', <CalendarPlusIcon />],
+	['users', <UsersIcon key='users' />],
+	['about', <BadgeIcon key='about' />],
+	['contact', <SendIcon key='contact' />],
+	['reviews', <MessagesIcon key='reviews' />],
+	['enquire', <SearchCheckIcon key='enquire' />],
+	['pricing', <BadgePercentIcon key='pricing' />],
+	['book', <CalendarPlusIcon key='book' />],
 ])
 
 export { careerLinks, colorModes, icons, listItemLinkClass, serviceLinks }
