@@ -1,6 +1,19 @@
 import { Button } from '@/components/ui/button'
 import tw from 'tailwind-styled-components'
 
+// *  NAVBAR  * //
+
+const NavbarContainer = tw.div`
+  flex
+  lg:p-8
+  pr-2
+  pl-1
+  pt-4
+  pb-8
+  items-center
+  justify-between
+`
+
 // *  SETTINGS  * //
 
 const SettingsContainer = tw.div`
@@ -47,14 +60,12 @@ const ModeItem = tw.div`
   flex
   flex-row
   text-sm
-  transition-opacity
-  duration-100
-  opacity-100
 `
 
 const ModeButton = tw(Button)`
   w-44
   justify-between
+  hover:bg-accent
 `
 
 // *  MENU  * //
@@ -93,6 +104,7 @@ const LogoContainer = tw.div`
 `
 
 const BrandContainer = tw.div`
+flex-1
 flex-row
 `
 
@@ -100,7 +112,7 @@ const Cover = tw.li`
   row-span-3
 `
 
-const LinkContainer = tw.a`
+const CoverContent = tw.a`
   flex
   h-full
   w-full
@@ -109,24 +121,24 @@ const LinkContainer = tw.a`
   justify-end
   bg-gradient-to-b
   from-secondary
-  dark:from-background
   to-white
+  dark:from-background
   dark:to-popover
   no-underline
   outline-none
   focus:shadow-md
   p-6
-  `
+ `
 
 const LinkContent = tw.div`
   flex
+  flex-row
   md:mb-2
   md:mt-4
   text-xl
   font-medium
   text-primary-foreground
   dark:text-accent-foreground
-  flex-row
   items-center
 `
 
@@ -151,7 +163,8 @@ const BrandSection = tw.div`
 
 const BrandName = tw.h2`
   font-medium
-  text-[1.0 rem]
+  text-[1.0rem]
+  dark:text-card-foreground/75
   md:text-[1.6rem]
   leading-tight
 `
@@ -159,15 +172,16 @@ const BrandName = tw.h2`
 const BrandSubtext = tw.h2`
   font-light
   text-[0.9rem]
-  md:text-md
+  md:text-[1.0rem]
   leading-tight
   text-secondary-foreground
-  dark:text-secondary-foreground/50
+  dark:text-secondary-foreground/75
 `
 
 const List = tw.ul`
   grid
-  gap-3
+  md:gap-3
+  gap-1
   xs:w-[300px]
   md:w-[400px]
   lg:w-[600px]
@@ -194,9 +208,9 @@ export {
 	BrandSection,
 	BrandSubtext,
 	Cover,
+	CoverContent,
 	Description,
 	Greeting,
-	LinkContainer,
 	LinkContent,
 	LinkTitle,
 	List,
@@ -206,6 +220,7 @@ export {
 	MobileContainer,
 	ModeButton,
 	ModeItem,
+	NavbarContainer,
 	SettingsContainer,
 	SettingsContent,
 	TitlePanel,

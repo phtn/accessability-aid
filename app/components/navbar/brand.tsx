@@ -13,8 +13,8 @@ import {
 	BrandSection,
 	BrandSubtext,
 	Cover,
+	CoverContent,
 	Greeting,
-	LinkContainer,
 	LinkContent,
 	LinkTitle,
 	List,
@@ -44,7 +44,7 @@ const Logo = () => (
 const HomeCover = () => (
 	<Cover>
 		<NavigationMenuLink asChild>
-			<LinkContainer href='/'>
+			<CoverContent href='/'>
 				<LogoContainer>
 					<Image
 						alt='logo'
@@ -64,7 +64,7 @@ const HomeCover = () => (
 					<LinkTitle>Home</LinkTitle>
 				</LinkContent>
 				<Greeting>{`Welcome to Accessability Aid Australia! A place where care blossoms and heart finds solace.`}</Greeting>
-			</LinkContainer>
+			</CoverContent>
 		</NavigationMenuLink>
 	</Cover>
 )
@@ -75,8 +75,15 @@ const HomeMenu = () => {
 			<NavigationMenuTrigger>
 				<BrandSection>
 					<BrandName>
-						Access
-						<span className='text-secondary-foreground/75'>ability</span> Aid
+						Access &middot;
+						<span className='text-secondary-foreground dark:text-secondary-foreground/75'>
+							{' '}
+							Ability &middot;
+						</span>
+						<span className='text-secondary-foreground/75 dark:text-secondary-foreground/50'>
+							{' '}
+							Aid
+						</span>
 					</BrandName>
 					<BrandSubtext>Australia</BrandSubtext>
 				</BrandSection>

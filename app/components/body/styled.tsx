@@ -1,30 +1,56 @@
 import { Button } from '@/components/ui/button'
 import tw from 'tailwind-styled-components'
 
+// *  CONTENT * //
+
+const BodyContainer = tw.div`
+  flex-1
+  rounded-sm
+  items-center
+  justify-center
+  lg:px-40
+  md:p-24
+  px-0
+  pt-20
+  bg-gradient-to-br
+  bg-slate-100
+  from-secondary/5
+  to-background
+  dark:bg-slate-100/5
+  transition-all
+  ease-out
+  duration-1000
+`
+
+// *  HERO  * //
+
 const HeroContainer = tw.div`
   flex-1
   h-full
-  lg:grid
-  lg:grid-cols-2
+  xl:grid
+  xl:grid-cols-2
   z-0
+  transition-all
+  duration-1000
+  hover:p-1
 `
 const HeroPrimary = tw.div`
-  flex-1
+  flex
   h-full
   w-full
-  px:8
-  lg:px-24
-  md:px-16
-  justify-center
-  items-center
+  px-4
+  xl:px-20
+  lg:px-10
+  flex-col
+  justify-between
+  items-start
 `
 
 const HeroSecondary = tw.div`
   h-fit
-  bg-slate-500
   items-center
   justify-center
-  md:rounded-2xl
+  md:rounded-xl
   overflow-hidden
   transition-all
   lg:scale-95
@@ -35,13 +61,12 @@ const HeroSecondary = tw.div`
 `
 
 const HeroTitle = tw.h1`
-  text-[2.25rem]
+  text-[2rem]
   md:text-[3.0rem]
   font-light
   text-foreground
   dark:text-secondary-foreground
   leading-tight
-  mb-6
 `
 
 const HeroSubtext = tw.h1`
@@ -49,14 +74,10 @@ const HeroSubtext = tw.h1`
   md:text-[1.25rem]
   font-light
   text-slate-400
-  my-8
 `
 
 const Discover = tw(Button)`
   rounded-full
-  px-8
-  py-6
-  mb-8
   transition-all
   hover:px-10
   ease-out
@@ -64,6 +85,7 @@ const Discover = tw(Button)`
 `
 
 export {
+	BodyContainer,
 	Discover,
 	HeroContainer,
 	HeroPrimary,

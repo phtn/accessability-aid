@@ -8,7 +8,6 @@ import {
 	HeroTitle,
 } from './styled'
 import { MoveRight } from 'lucide-react'
-import { Content } from '@/app/styled'
 
 const Hero = () => (
 	<HeroContainer>
@@ -21,7 +20,7 @@ const Hero = () => (
 			<Discover
 				variant={'outline'}
 				size={'lg'}>
-				<span className='text-[1rem]'>Learn more</span>
+				<span className='lg:text-[1rem] text-[0.85rem]'>Learn more</span>
 				<MoveRight className='ml-5' />
 			</Discover>
 		</HeroPrimary>
@@ -37,12 +36,4 @@ const Hero = () => (
 	</HeroContainer>
 )
 
-const Body = () => {
-	return (
-		<Content>
-			<Hero />
-		</Content>
-	)
-}
-
-export { Body }
+export { Hero }

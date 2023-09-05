@@ -5,38 +5,9 @@ type TextProps = {
 }
 
 const Container = tw.div`
-  w-screen
-  h-screen
+  w-full
+  h-full
   overflow-hidden
-`
-
-const Content = tw.div`
-  flex
-  rounded-sm
-  items-center
-  justify-center
-  lg:px-40
-  md:px-24
-  px-16
-  py-24
-  bg-slate-100
-  dark:bg-slate-100/5
-  transition-all
-  scale-105
-  hover:scale-100
-  ease-out
-  duration-1000
-`
-
-const Navbar = tw.div`
-  flex
-  lg:p-8
-  pr-2
-  pl-1
-  pt-4
-  pb-8
-  items-center
-  justify-between
 `
 
 // * Components
@@ -81,13 +52,11 @@ const ListItemTitleText = tw.h1`
 
 export {
 	Container,
-	Content,
 	ListItemContent,
 	ListItemDescription,
 	ListItemPanel,
 	ListItemTitle,
 	ListItemTitleText,
-	Navbar,
 }
 
 const primary = '#90D1D4'

@@ -1,18 +1,11 @@
 'use client'
 
-import { Container, Navbar } from './styled'
-import { Menu } from './components/navbar/menu'
-import { Brand } from './components/navbar/brand'
-import { Body } from './components/body/body'
-import { Mobile } from './components/navbar/mobile'
+import { Container } from './styled'
+import { Body, Navbar } from './components'
 
 const Home = () => (
 	<Container>
-		<Navbar>
-			<Brand />
-			<Menu />
-			<Mobile />
-		</Navbar>
+		<Navbar />
 		<Body />
 	</Container>
 )
