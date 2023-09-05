@@ -101,6 +101,16 @@ const HomeCover = () => (
 	<Item>
 		<NavigationMenuLink asChild>
 			<LinkContainer href='/'>
+				<LogoContainer>
+					<Image
+						alt='logo'
+						src={logoOne}
+						priority
+						width={24}
+						height={24}
+						className='w-16 h-auto relative transition-all scale-75 animate-in rotate-90 duration-500 ease-out'
+					/>
+				</LogoContainer>
 				<LinkContent>
 					<HomeIcon
 						height={24}
@@ -176,6 +186,7 @@ const HomeMenuItem = () => {
 			<NavigationMenuContent>
 				<List>
 					<HomeCover />
+
 					<ListItem
 						alt='about'
 						href='/about-us'

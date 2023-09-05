@@ -34,7 +34,9 @@ const arrowClass = `
 `
 
 const settingsClass: string = `
-  dark:fill-primary
+  dark:fill-secondary/10
+	dark:text-secondary-foreground
+  stroke-1
   w-[1.35rem]
 `
 
