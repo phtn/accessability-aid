@@ -20,8 +20,8 @@ const Hero = () => (
 			<Discover
 				variant={'outline'}
 				size={'lg'}>
-				<span className='lg:text-[1rem] text-[0.85rem]'>Learn more</span>
-				<MoveRight className='ml-5' />
+				<span className='xl:text-[.90rem] text-[.75rem]'>Learn more</span>
+				<MoveRight className='ml-5 w-4' />
 			</Discover>
 		</HeroPrimary>
 		<HeroSecondary>

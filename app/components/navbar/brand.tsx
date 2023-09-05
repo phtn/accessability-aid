@@ -36,7 +36,7 @@ const Logo = () => (
 			priority
 			width={24}
 			height={24}
-			className='w-10 h-auto relative transition-all'
+			className='w-12 h-auto relative transition-all md:ml-6 mr:4'
 		/>
 	</LogoContainer>
 )
@@ -52,7 +52,7 @@ const HomeCover = () => (
 						priority
 						width={24}
 						height={24}
-						className='w-16 h-auto relative transition-all scale-75 animate-in rotate-90 duration-500 ease-out'
+						className='w-24 h-auto relative transition-all scale-75 animate-in rotate-45 duration-1000 ease-out'
 					/>
 				</LogoContainer>
 				<LinkContent>
@@ -76,11 +76,11 @@ const HomeMenu = () => {
 				<BrandSection>
 					<BrandName>
 						Access &middot;
-						<span className='text-secondary-foreground dark:text-secondary-foreground/75'>
+						<span className='text-secondary-foreground dark:text-secondary-foreground'>
 							{' '}
 							Ability &middot;
 						</span>
-						<span className='text-secondary-foreground/75 dark:text-secondary-foreground/50'>
+						<span className='text-secondary dark:text-secondary-foreground/75'>
 							{' '}
 							Aid
 						</span>

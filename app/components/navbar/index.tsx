@@ -1,4 +1,5 @@
 import { Brand } from './brand'
+import { Login } from './login'
 import { Menu } from './menu'
 import { Mobile } from './mobile'
 import { NavbarContainer } from './styled'
@@ -8,6 +9,7 @@ const Navbar = () => (
 		<Brand />
 		<Menu />
 		<Mobile />
+		<Login />
 	</NavbarContainer>
 )
 

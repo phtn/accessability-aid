@@ -5,11 +5,9 @@ import tw from 'tailwind-styled-components'
 
 const NavbarContainer = tw.div`
   flex
-  lg:p-8
-  pr-2
-  pl-1
-  pt-4
-  pb-8
+  md:px-16
+  md:py-8
+  py-4
   items-center
   justify-between
 `
@@ -78,20 +76,20 @@ const Menubar = tw.div`
   ease-out
   scale-x-0
   lg:scale-x-100
-  lg:flex
+  xl:flex
   hidden
-  lg:visible
-  z-50
+  z-40
 `
 
 const ListContainer = tw.ul`
   gap-3
-  md:grid
-  md:grid-cols-2
-  xs:w-[300px]
-  md:w-[500px]
+  grid
   lg:w-[600px]
+  md:w-[500]
+  md:grid-cols-2
   p-4
+  w-[400]
+  overflow-hidden
 `
 
 // *  HOME  *
@@ -195,10 +193,19 @@ const ActiveText = tw.span`
 // *  MOBILE  *  //
 
 const MobileContainer = tw.div`
-  lg:scale-0
+  xl:scale-0
   transition-all 
   duration-300
   scale-100
+`
+
+// *  LOGIN  *  //
+
+const LoginContainer = tw.div`
+  lg:flex
+  flex-row
+  justify-between
+  hidden
 `
 
 export {
@@ -215,6 +222,7 @@ export {
 	LinkTitle,
 	List,
 	ListContainer,
+	LoginContainer,
 	LogoContainer,
 	Menubar,
 	MobileContainer,

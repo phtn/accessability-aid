@@ -7,7 +7,7 @@ import {
 import { MobileContainer } from './styled'
 import { Button } from '@/components/ui/button'
 import { BadgeIcon } from '@/app/icons'
-import { User2Icon } from 'lucide-react'
+import { LayoutGrid, User2Icon } from 'lucide-react'
 
 const MobileMenu = () => {
 	return (
@@ -16,7 +16,7 @@ const MobileMenu = () => {
 				<Button
 					variant='ghost'
 					size='icon'>
-					<User2Icon />
+					<LayoutGrid />
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align='end'>

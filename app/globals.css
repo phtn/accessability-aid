@@ -46,7 +46,7 @@
 		--popover-foreground: 174 15% 82%;
 
 		--primary: 210 40% 98%;
-		--primary-foreground: 222.2 47.4% 11.2%;
+		--primary-foreground: 222.2 84% 4.9%;
 
 		--secondary: 184.2 53.4% 67.2%;
 		--secondary-foreground: 183 44% 52.1%;
@@ -73,4 +73,8 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+::-webkit-scrollbar {
+	display: none;
 }

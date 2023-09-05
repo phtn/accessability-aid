@@ -41,7 +41,7 @@ const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(`
   group inline-flex h-16 w-max items-center justify-center rounded-xl
-  bg-background px-6 py-3 mx-2 text-[1.0rem] text-foreground/95 
+  bg-background px-6 py-3 mx-2 text-[0.9rem] text-foreground/95 font-medium 
 	dark:text-primary/75 font-light transition-colors
   hover:bg-slate-200/5 hover:text-accent-foreground dark:focus:text-primary
   focus:bg-background focus:text-accent-foreground focus:outline-none
@@ -77,7 +77,7 @@ const NavigationMenuContent = React.forwardRef<
 	<NavigationMenuPrimitive.Content
 		ref={ref}
 		className={cn(
-			'left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ',
+			'left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-36 data-[motion=from-start]:slide-in-from-left-36 data-[motion=to-end]:slide-out-to-right-36 data-[motion=to-start]:slide-out-to-left-36 md:absolute md:w-auto',
 			className
 		)}
 		{...props}
@@ -94,7 +94,7 @@ const NavigationMenuViewport = React.forwardRef<
 	<div className={cn('absolute left-0 top-full flex justify-center')}>
 		<NavigationMenuPrimitive.Viewport
 			className={cn(
-				'z-[50] origin-top-center relative md:left-2 left-3 mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-[320px] rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-0 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]',
+				'z-[50] origin-top-center relative md:left-2 left-3 mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-[340px] rounded-md border bg-popover text-popover-foreground shadow data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-0 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]',
 				className
 			)}
 			ref={ref}

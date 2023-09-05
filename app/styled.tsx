@@ -13,13 +13,10 @@ const Container = tw.div`
 // * Components
 
 const ListItemContent = tw.li`
-  transition-transform
-  opacity-100:animate-in
   duration-500
   ease-out
   scale-105
   hover:scale-100
-  w-full
 `
 
 const ListItemPanel = tw.div`
@@ -34,6 +31,7 @@ const ListItemDescription = tw.p`
   text-sm
   leading-snug 
   text-muted-foreground
+  dark:text-slate-400
 `
 
 const ListItemTitle = tw.div`
