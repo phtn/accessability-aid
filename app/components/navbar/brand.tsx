@@ -1,3 +1,4 @@
+'use client'
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -24,20 +25,14 @@ import { ListItem } from '../components'
 import { Settings } from './settings'
 import { HomeIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
+import { Tent } from 'lucide-react'
 
 const logoOne = '/logo-green.png'
 const logoTwo = '/logo-yellow.png'
 
 const Logo = () => (
 	<LogoContainer>
-		<Image
-			alt='logo'
-			src={logoOne}
-			priority
-			width={24}
-			height={24}
-			className='w-12 h-auto relative transition-all md:ml-6 mr:4'
-		/>
+		<Tent className='h-14 w-auto stroke-1 dark:text-secondary-foreground/75' />
 	</LogoContainer>
 )
 
@@ -46,14 +41,7 @@ const HomeCover = () => (
 		<NavigationMenuLink asChild>
 			<CoverContent href='/'>
 				<LogoContainer>
-					<Image
-						alt='logo'
-						src={logoOne}
-						priority
-						width={24}
-						height={24}
-						className='w-24 h-auto relative transition-all scale-75 animate-in rotate-45 duration-1000 ease-out'
-					/>
+					<Tent className='h-32 w-auto stroke-1 dark:text-secondary-foreground/75 transition-all scale-75 animate-in duration-1000 ease-out' />
 				</LogoContainer>
 				<LinkContent>
 					<HomeIcon

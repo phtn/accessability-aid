@@ -77,8 +77,10 @@ const Menubar = tw.div`
   scale-x-0
   lg:scale-x-100
   xl:flex
+  flex-row
   hidden
   z-40
+  w-full
 `
 
 const ListContainer = tw.ul`
@@ -95,9 +97,6 @@ const ListContainer = tw.ul`
 // *  HOME  *
 
 const LogoContainer = tw.div`
-  flex
-  flex-row
-  w-0
   md:w-full
 `
 
@@ -169,8 +168,8 @@ const BrandName = tw.h2`
 
 const BrandSubtext = tw.h2`
   font-light
-  text-[0.9rem]
-  md:text-[1.0rem]
+  text-[0.75rem]
+  md:text-[0.8rem]
   leading-tight
   text-secondary-foreground
   dark:text-secondary-foreground/75

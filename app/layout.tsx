@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Lexend } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Navbar } from './components'
 
 const lexend = Lexend({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
 					attribute='class'
 					defaultTheme='system'
 					enableSystem>
+					<Navbar />
 					{children}
 				</ThemeProvider>
 			</body>

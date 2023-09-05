@@ -1,11 +1,10 @@
 'use client'
 
 import { Container } from './styled'
-import { Body, Navbar } from './components'
+import { Body } from './components'
 
 const Home = () => (
 	<Container>
-		<Navbar />
 		<Body />
 	</Container>
 )

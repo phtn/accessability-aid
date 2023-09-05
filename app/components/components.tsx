@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef, useState } from 'react'
 import { cn, getInitials, map } from '@/lib/utils'
 import type { AvatarProps, ListItemProps } from '../types'

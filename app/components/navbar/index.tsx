@@ -1,3 +1,5 @@
+'use client'
+
 import { Brand } from './brand'
 import { Login } from './login'
 import { Menu } from './menu'

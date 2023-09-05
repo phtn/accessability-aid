@@ -43,10 +43,10 @@ const navigationMenuTriggerStyle = cva(`
   group inline-flex h-16 w-max items-center justify-center rounded-xl
   bg-background px-6 py-3 mx-2 text-[0.9rem] text-foreground/95 font-medium 
 	dark:text-primary/75 font-light transition-colors
-  hover:bg-slate-200/5 hover:text-accent-foreground dark:focus:text-primary
+  hover:text-accent-foreground dark:focus:text-primary
   focus:bg-background focus:text-accent-foreground focus:outline-none
   disabled:pointer-events-none disabled:opacity-50
-  data-[active]:bg-background data-[state=open]:bg-slate-100/50
+  data-[active]:bg-background
   dark:data-[active]:bg-secondary/25 dark:data-[state=open]:bg-secondary/10
   dark:data-[state=open]:text-primary
   `)
