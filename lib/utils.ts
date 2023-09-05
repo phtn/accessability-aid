@@ -1,5 +1,5 @@
 import { type ClassValue, clsx } from 'clsx'
-import { ReactElement } from 'react'
+import { Dispatch, ReactElement, SetStateAction } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 function cn(...inputs: ClassValue[]) {
@@ -27,4 +27,8 @@ function map(e1: ReactElement, e2: ReactElement): Map<boolean, ReactElement> {
 	return pairs
 }
 
-export { cn, getInitials, map }
+function toggle(setState: Dispatch<SetStateAction<boolean>>): void {
+	setState((prevState) => !prevState)
+}
+
+export { cn, getInitials, map, toggle }

@@ -36,6 +36,7 @@ const arrowClass = `
 const settingsClass: string = `
   dark:fill-secondary/10
 	dark:text-secondary-foreground
+	fill-secondary
   stroke-1
   w-[1.35rem]
 `
@@ -48,7 +49,6 @@ const ArrowUpRightIcon = tw(ArrowUpRight)<IconProps>`
   ${(_p) => arrowClass}
 	transition-all
 	duration-500
-	
 `
 
 const BadgeIcon = tw(BadgeCheck)`

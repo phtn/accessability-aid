@@ -1,4 +1,4 @@
-import { ColorModeProps, LinkProps } from './types'
+import { LinkProps } from './types'
 import {
 	SunIcon,
 	MoonIcon,
@@ -11,6 +11,7 @@ import {
 	BadgePercentIcon,
 	CalendarPlusIcon,
 } from './icons'
+import { ColorModeProps } from './components/navbar/types'
 
 const serviceLinks: LinkProps[] = [
 	{

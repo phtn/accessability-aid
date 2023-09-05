@@ -1,17 +1,9 @@
-import { ComponentPropsWithoutRef, ReactElement, ReactNode } from 'react'
+import { ComponentPropsWithoutRef } from 'react'
 
 type AvatarProps = {
 	alt: string
 	src: string
 	icon?: boolean
-}
-
-type ColorModes = 'light' | 'dark' | 'system'
-
-type ColorModeProps = {
-	title: string
-	mode: ColorModes
-	Icon: ({ isHovered }: { isHovered: boolean }) => ReactElement
 }
 
 type LinkProps = {
@@ -32,17 +24,4 @@ interface ListItemProps extends ComponentPropsWithoutRef<'a'> {
 	alt: string
 }
 
-type ModeProps = {
-	Icon: ({ isHovered }: { isHovered: boolean }) => ReactElement
-	mode: ColorModes
-	title: string
-}
-
-export type {
-	AvatarProps,
-	ColorModes,
-	ColorModeProps,
-	LinkProps,
-	ListItemProps,
-	ModeProps,
-}
+export type { AvatarProps, LinkProps, ListItemProps }
