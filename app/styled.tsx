@@ -10,7 +10,9 @@ const Content = tw.div`
   rounded-sm
   items-center
   justify-center
-  md:px-40
+  lg:px-40
+  md:px-24
+  px-16
   py-24
   bg-slate-100
   dark:bg-slate-100/5
@@ -80,29 +82,30 @@ const Flex = tw.div`
 const Hero = tw.div`
   flex-1
   h-full
-  md:grid
-  md:grid-cols-2
+  lg:grid
+  lg:grid-cols-2
   z-0
 `
 const HeroPrimary = tw.div`
   flex-1
   h-full
   w-full
-  px-24
+  px:8
+  lg:px-24
+  md:px-16
   justify-center
   items-center
 `
 
 const HeroSecondary = tw.div`
-  h-full
-  w-full
+  h-fit
   bg-slate-500
   items-center
   justify-center
-  rounded-3xl
+  md:rounded-2xl
   overflow-hidden
   transition-all
-  scale-95
+  lg:scale-95
   hover:scale-100
   transform-gpu
   duration-1000
@@ -110,20 +113,20 @@ const HeroSecondary = tw.div`
 `
 
 const HeroTitle = tw.h1`
-  text-[2.5rem]
-  md:text-[4.0rem]
+  text-[2.25rem]
+  md:text-[3.0rem]
   font-light
   text-foreground
   leading-tight
-  mb-12
+  mb-6
 `
 
 const HeroSubtext = tw.h1`
-  text-[1.25rem]
-  md:text-[1.75rem]
+  text-[1.15rem]
+  md:text-[1.25rem]
   font-light
   text-slate-400
-  my-16
+  my-8
 `
 
 const Item = tw.li`

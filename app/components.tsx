@@ -7,7 +7,7 @@ import {
 	NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 import { cn, getInitials, map } from '@/lib/utils'
-import { forwardRef, useState } from 'react'
+import { forwardRef, useCallback, useState } from 'react'
 import {
 	ActiveText,
 	BrandContainer,
@@ -46,7 +46,7 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
 import { Sun, Moon, Laptop2, MenuIcon } from 'lucide-react'
-import type { AvatarProps, ColorModes, ListItemProps } from './types'
+import type { AvatarProps, ColorModes, ListItemProps, ModeProps } from './types'
 import { HomeIcon } from '@radix-ui/react-icons'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { AvatarImage } from '@radix-ui/react-avatar'
@@ -117,11 +117,27 @@ const HomeCover = () => (
 
 const SettingsListItem = () => {
 	const { setTheme } = useTheme()
-	const [isHovered, setIsHovered] = useState(false)
 
 	const handleModeSelect = (mode: ColorModes) => () => {
 		setTheme(mode)
 	}
+
+	const Modes = useCallback((props: ModeProps) => {
+		const [isHovered, setIsHovered] = useState(false)
+		const handleOnMouseEnter = () => setIsHovered(true)
+		const handleOnMouseLeave = () => setIsHovered(false)
+		const { Icon, mode, title } = props
+		return (
+			<Button
+				onMouseEnter={handleOnMouseEnter}
+				onMouseLeave={handleOnMouseLeave}
+				variant={'ghost'}
+				onClick={handleModeSelect(mode)}>
+				{title}
+				<Icon isHovered={isHovered} />
+			</Button>
+		)
+	}, [])
 
 	return (
 		<SubList>
@@ -131,21 +147,15 @@ const SettingsListItem = () => {
 			</ListItemTitleStatic>
 			<ListItemDescriptionStatic>Change color mode</ListItemDescriptionStatic>
 			<SubListContent>
-				{colorModes.map((colorMode) => {
-					const { title, mode, Icon } = colorMode
-					const handleOnMouseEnter = () => setIsHovered(true)
-					const handleOnMouseLeave = () => setIsHovered(false)
+				{colorModes.map((colorMode, index) => {
+					const { mode } = colorMode
+					const modeProps = {
+						...colorMode,
+					}
 
 					return (
 						<SubListItem key={mode}>
-							<Button
-								onMouseEnter={handleOnMouseEnter}
-								onMouseLeave={handleOnMouseLeave}
-								variant={'ghost'}
-								onClick={handleModeSelect(mode)}>
-								{title}
-								<Icon isHovered={isHovered} />
-							</Button>
+							<Modes {...modeProps} />
 						</SubListItem>
 					)
 				})}

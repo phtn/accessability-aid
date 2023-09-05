@@ -32,10 +32,17 @@ interface ListItemProps extends ComponentPropsWithoutRef<'a'> {
 	alt: string
 }
 
+type ModeProps = {
+	Icon: ({ isHovered }: { isHovered: boolean }) => ReactElement
+	mode: ColorModes
+	title: string
+}
+
 export type {
 	AvatarProps,
 	ColorModes,
 	ColorModeProps,
 	LinkProps,
 	ListItemProps,
+	ModeProps,
 }
