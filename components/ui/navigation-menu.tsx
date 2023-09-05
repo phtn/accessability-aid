@@ -62,7 +62,7 @@ const NavigationMenuTrigger = React.forwardRef<
 		<Circle
 			fill='#90D1D4'
 			stroke='#90D1D4'
-			className='relative top-[1px] ml-5 h-3 w-3 transition duration-300 group-data-[state=closed]:scale-0 group-data-[state=open]:scale-100 '
+			className='relative top-[1px] ml-5 h-3 w-3 transition-all duration-500 group-data-[state=closed]:scale-0 group-data-[state=open]:scale-100'
 			aria-hidden='true'
 		/>
 	</NavigationMenuPrimitive.Trigger>
@@ -93,7 +93,7 @@ const NavigationMenuViewport = React.forwardRef<
 	<div className={cn('absolute left-0 top-full flex justify-center')}>
 		<NavigationMenuPrimitive.Viewport
 			className={cn(
-				'z-[50] origin-top-center relative md:left-2 left-3 mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-[300px] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]',
+				'z-[50] origin-top-center relative md:left-2 left-3 mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-[300px] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-0 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]',
 				className
 			)}
 			ref={ref}

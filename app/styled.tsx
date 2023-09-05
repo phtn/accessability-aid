@@ -1,5 +1,9 @@
 import tw from 'tailwind-styled-components'
 
+type HeroProps = {
+	scale: string
+}
+
 const Container = tw.div`
   w-screen
   h-screen
@@ -16,6 +20,12 @@ const Content = tw.div`
   py-24
   bg-slate-100
   dark:bg-slate-100/5
+  transition-all
+  animate-in
+  scale-105
+  hover:scale-100
+  ease-out
+  duration-1000
 `
 
 const Navbar = tw.div`
@@ -108,7 +118,7 @@ const HeroSecondary = tw.div`
   lg:scale-95
   hover:scale-100
   transform-gpu
-  duration-1000
+  duration-500
   z-0
 `
 
@@ -192,7 +202,10 @@ const ListContainer = tw.ul`
 
 const ListItemContent = tw.li`
   transition-transform
-  scale-100
+  duration-500
+  ease-out
+  scale-105
+  hover:scale-100
   w-full
 `
 

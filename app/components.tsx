@@ -7,7 +7,13 @@ import {
 	NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 import { cn, getInitials, map } from '@/lib/utils'
-import { forwardRef, useCallback, useState } from 'react'
+import {
+	forwardRef,
+	useCallback,
+	useEffect,
+	useLayoutEffect,
+	useState,
+} from 'react'
 import {
 	ActiveText,
 	BrandContainer,
@@ -35,6 +41,12 @@ import {
 	ListItemTitleText,
 	BrandNameSub,
 	BrandNameMain,
+	Content,
+	Hero,
+	HeroPrimary,
+	HeroSecondary,
+	HeroSubtext,
+	HeroTitle,
 } from './styled'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
@@ -45,7 +57,7 @@ import {
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
-import { Sun, Moon, Laptop2, MenuIcon } from 'lucide-react'
+import { Sun, Moon, Laptop2, MenuIcon, MoveRight } from 'lucide-react'
 import type { AvatarProps, ColorModes, ListItemProps, ModeProps } from './types'
 import { HomeIcon } from '@radix-ui/react-icons'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
@@ -179,7 +191,10 @@ const HomeMenuItem = () => {
 		<NavigationMenuItem>
 			<NavigationMenuTrigger>
 				<BrandName>
-					<BrandNameMain>Accessability Aid</BrandNameMain>
+					<BrandNameMain>
+						Access
+						<span className='text-secondary-foreground/75'>ability</span> Aid
+					</BrandNameMain>
 					<BrandNameSub>Australia</BrandNameSub>
 				</BrandName>
 			</NavigationMenuTrigger>
@@ -319,6 +334,44 @@ const ListItemAvatar = (props: AvatarProps) => {
 	return <>{options.get(icon as boolean)}</>
 }
 
+const Body = () => {
+	const [heroScale, setHeroScale] = useState(`scale-125`)
+
+	useLayoutEffect(() => {
+		setHeroScale(`scale-100`)
+	}, [])
+
+	return (
+		<Content>
+			<Hero>
+				<HeroPrimary>
+					<HeroTitle>A brand new way of living in comfort.</HeroTitle>
+					<HeroSubtext>
+						Explore our care services for a life of freedom, happiness and
+						well-being.
+					</HeroSubtext>
+					<Button
+						className='rounded-full px-8 py-6 mb-8 transition-all hover:px-10 ease-out duration-500'
+						variant={'outline'}
+						size={'lg'}>
+						<span className='text-[1rem]'>Learn more</span>
+						<MoveRight className='ml-5 transition-transform' />
+					</Button>
+				</HeroPrimary>
+				<HeroSecondary>
+					<Image
+						alt='hero-image'
+						src={'/hero-image-one.jpg'}
+						height={200}
+						width={200}
+						className='w-full z-0 opacity-90'
+					/>
+				</HeroSecondary>
+			</Hero>
+		</Content>
+	)
+}
+
 const ListItem = forwardRef<React.ElementRef<'a'>, ListItemProps>(
 	({ alt, avatarSrc, children, className, icon, title, ...props }, ref) => {
 		const [isHovered, setIsHovered] = useState(false)
@@ -354,4 +407,4 @@ const ListItem = forwardRef<React.ElementRef<'a'>, ListItemProps>(
 )
 ListItem.displayName = 'ListItem'
 
-export { Brand, HomeMenuItem, Menu, Mobile, Careers, Services }
+export { Body, Brand, HomeMenuItem, Menu, Mobile, Careers, Services }
