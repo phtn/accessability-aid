@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import { Hero } from './body'
 import { BodyContainer, PanelContainer } from './styled'

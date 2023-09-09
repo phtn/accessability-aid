@@ -1,3 +1,5 @@
+'use client'
+
 const NDIS = () => {
 	return <div>ndis</div>
 }

@@ -32,6 +32,7 @@ const Hero = () => (
 				height={200}
 				width={200}
 				className='w-full z-0 opacity-90'
+				priority
 			/>
 		</HeroSecondary>
 	</HeroContainer>

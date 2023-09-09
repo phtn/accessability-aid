@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Lexend } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Navbar } from './components'
+import { Toaster } from '@/components/ui/toaster'
 
 const lexend = Lexend({ subsets: ['latin'] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({
 					enableSystem>
 					<Navbar />
 					{children}
+					<Toaster />
 				</ThemeProvider>
 			</body>
 		</html>

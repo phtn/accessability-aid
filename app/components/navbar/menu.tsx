@@ -51,12 +51,33 @@ const Careers = () => (
 	</NavigationMenuItem>
 )
 
+const FAQ = () => (
+	<NavigationMenuItem>
+		<NavigationMenuTrigger>FAQs</NavigationMenuTrigger>
+		<NavigationMenuContent>
+			<ListContainer>
+				{careerLinks.map((link) => (
+					<ListItem
+						alt={link.alt}
+						avatarSrc={link.avatar}
+						key={link.title}
+						title={link.title}
+						href={link.href}>
+						{link.description}
+					</ListItem>
+				))}
+			</ListContainer>
+		</NavigationMenuContent>
+	</NavigationMenuItem>
+)
+
 const Menu = () => (
 	<Menubar>
 		<NavigationMenu>
 			<NavigationMenuList>
 				<Services />
 				<Careers />
+				<FAQ />
 			</NavigationMenuList>
 		</NavigationMenu>
 	</Menubar>

@@ -17,7 +17,7 @@ const MobileMenu = () => {
 				<Button
 					variant='ghost'
 					size='icon'>
-					<LayoutGrid />
+					<LayoutGrid className='' />
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align='end'>

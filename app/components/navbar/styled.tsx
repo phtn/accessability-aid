@@ -8,6 +8,7 @@ const NavbarContainer = tw.div`
   md:px-16
   md:py-8
   py-4
+  px-5
   items-center
   justify-between
 `

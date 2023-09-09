@@ -1,4 +1,5 @@
 'use client'
+
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -32,7 +33,7 @@ const logoTwo = '/logo-yellow.png'
 
 const Logo = () => (
 	<LogoContainer>
-		<Tent className='h-14 w-auto stroke-1 dark:text-secondary-foreground/75' />
+		<Tent className='h-10 md:h-14 w-auto stroke-1 dark:text-secondary-foreground/75' />
 	</LogoContainer>
 )
 
