@@ -66,15 +66,11 @@ const HomeMenu = () => {
 				<NavigationMenuTrigger>
 					<BrandSection>
 						<BrandName>
-							Access &middot;
+							Access
 							<span className='text-secondary-foreground dark:text-secondary-foreground'>
-								{' '}
-								Ability &middot;
+								Ability
 							</span>
-							<span className='text-secondary dark:text-secondary-foreground/75'>
-								{' '}
-								Aid
-							</span>
+							<span className='text-secondary dark:text-accent/75'> Aid</span>
 						</BrandName>
 					</BrandSection>
 				</NavigationMenuTrigger>
