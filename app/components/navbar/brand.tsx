@@ -27,6 +27,7 @@ import { Settings } from './settings'
 import { HomeIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import { Tent } from 'lucide-react'
+import Link from 'next/link'
 
 const logoOne = '/logo-green.png'
 const logoTwo = '/logo-yellow.png'
@@ -60,44 +61,45 @@ const HomeCover = () => (
 
 const HomeMenu = () => {
 	return (
-		<NavigationMenuItem>
-			<NavigationMenuTrigger>
-				<BrandSection>
-					<BrandName>
-						Access &middot;
-						<span className='text-secondary-foreground dark:text-secondary-foreground'>
-							{' '}
-							Ability &middot;
-						</span>
-						<span className='text-secondary dark:text-secondary-foreground/75'>
-							{' '}
-							Aid
-						</span>
-					</BrandName>
-					<BrandSubtext>Australia</BrandSubtext>
-				</BrandSection>
-			</NavigationMenuTrigger>
-			<NavigationMenuContent>
-				<List>
-					<HomeCover />
-					<ListItem
-						alt='about'
-						href='/about-us'
-						title='About Us'
-						icon>
-						<ActiveText>{`Meet our team →`}</ActiveText>
-					</ListItem>
-					<ListItem
-						alt='contact'
-						href='/contact-us'
-						title='Contact Us'
-						icon>
-						Get in touch with our support team.
-					</ListItem>
-					<Settings />
-				</List>
-			</NavigationMenuContent>
-		</NavigationMenuItem>
+		<Link href={'/'}>
+			<NavigationMenuItem>
+				<NavigationMenuTrigger>
+					<BrandSection>
+						<BrandName>
+							Access &middot;
+							<span className='text-secondary-foreground dark:text-secondary-foreground'>
+								{' '}
+								Ability &middot;
+							</span>
+							<span className='text-secondary dark:text-secondary-foreground/75'>
+								{' '}
+								Aid
+							</span>
+						</BrandName>
+					</BrandSection>
+				</NavigationMenuTrigger>
+				<NavigationMenuContent>
+					<List>
+						<HomeCover />
+						<ListItem
+							alt='about'
+							href='/about-us'
+							title='About Us'
+							icon>
+							<ActiveText>{`Meet our team →`}</ActiveText>
+						</ListItem>
+						<ListItem
+							alt='contact'
+							href='/contact-us'
+							title='Contact Us'
+							icon>
+							Get in touch with our support team.
+						</ListItem>
+						<Settings />
+					</List>
+				</NavigationMenuContent>
+			</NavigationMenuItem>
+		</Link>
 	)
 }
 
