@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { ColorModeProps, ColorModes, ModeItemProps } from './types'
 import { Button } from '@/components/ui/button'
-import { toggle } from '@/lib/utils'
+import { toggle } from '@/utils/helpers'
 import { useTheme } from 'next-themes'
 import { FixedSizeListProps, FixedSizeList as ModeList } from 'react-window'
 

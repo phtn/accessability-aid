@@ -2,16 +2,18 @@
 import Image from 'next/image'
 import {
 	Discover,
-	HeroContainer,
 	HeroPrimary,
 	HeroSecondary,
 	HeroSubtext,
 	HeroTitle,
 } from './styled'
-import { MoveRight } from 'lucide-react'
+import { MessageSquare, MoveRight } from 'lucide-react'
+import { LgContent } from '@/app/styled'
+import { toast } from 'sonner'
+import Toasted from '../toasted'
 
 const Hero = () => (
-	<HeroContainer>
+	<LgContent>
 		<HeroPrimary>
 			<HeroTitle>A brand new way of living in comfort.</HeroTitle>
 			<HeroSubtext>
@@ -19,6 +21,19 @@ const Hero = () => (
 				well-being.
 			</HeroSubtext>
 			<Discover
+				onClick={() =>
+					// toast.success('My Toasted friend', {
+					// 	className: 'bg-background text-foreground',
+					// 	description: 'It has been a minute.',
+					// 	duration: 5000,
+					// 	icon: <MessageSquare />,
+					// 	action: {
+					// 		label: 'Cancel',
+					// 		onClick: () => console.log(null),
+					// 	},
+					// })
+					toast.success('Yay')
+				}
 				variant={'outline'}
 				size={'lg'}>
 				<span className='xl:text-[.90rem] text-[.75rem]'>Learn more</span>
@@ -35,7 +50,7 @@ const Hero = () => (
 				priority
 			/>
 		</HeroSecondary>
-	</HeroContainer>
+	</LgContent>
 )
 
 export { Hero }

@@ -13,7 +13,6 @@ import {
 	BrandContainer,
 	BrandName,
 	BrandSection,
-	BrandSubtext,
 	Cover,
 	CoverContent,
 	Greeting,
@@ -21,39 +20,48 @@ import {
 	LinkTitle,
 	List,
 	LogoContainer,
+	LogoContainerCover,
 } from './styled'
 import { ListItem } from '../components'
 import { Settings } from './settings'
-import { HomeIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
-import { Tent } from 'lucide-react'
 import Link from 'next/link'
 
-const logoOne = '/logo-green.png'
-const logoTwo = '/logo-yellow.png'
+const logoOne = '/new-logo-aaa.svg'
 
 const Logo = () => (
 	<LogoContainer>
-		<Tent className='h-10 md:h-14 w-auto stroke-1 dark:text-secondary-foreground/75' />
+		<Image
+			alt='aaa-logo'
+			src={logoOne}
+			width={100}
+			height={100}
+			className='w-full scale-75 transition-transform animate-in duration-1000 ease-in'
+		/>
 	</LogoContainer>
+)
+
+const LogoCover = () => (
+	<LogoContainerCover>
+		<Image
+			alt='aaa-logo'
+			src={logoOne}
+			width={112}
+			height={112}
+			className='w-full scale-90 transition-transform animate-in duration-1000 ease-in'
+		/>
+	</LogoContainerCover>
 )
 
 const HomeCover = () => (
 	<Cover>
 		<NavigationMenuLink asChild>
 			<CoverContent href='/'>
-				<LogoContainer>
-					<Tent className='h-32 w-auto stroke-1 dark:text-secondary-foreground/75 transition-all scale-75 animate-in duration-1000 ease-out' />
-				</LogoContainer>
+				<LogoCover />
 				<LinkContent>
-					<HomeIcon
-						height={24}
-						width={24}
-						className='dark:text-secondary-foreground'
-					/>
 					<LinkTitle>Home</LinkTitle>
 				</LinkContent>
-				<Greeting>{`Welcome to Accessability Aid Australia! A place where care blossoms and heart finds solace.`}</Greeting>
+				<Greeting>{`Welcome to Accessability Aid! A place where care blossoms and heart finds solace.`}</Greeting>
 			</CoverContent>
 		</NavigationMenuLink>
 	</Cover>

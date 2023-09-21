@@ -3,7 +3,7 @@ import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
 import { cva } from 'class-variance-authority'
 import { Circle } from 'lucide-react'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/utils/helpers'
 
 const NavigationMenu = React.forwardRef<
 	React.ElementRef<typeof NavigationMenuPrimitive.Root>,
@@ -41,9 +41,9 @@ const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(`
   group inline-flex h-16 w-max items-center justify-center rounded-xl
-  bg-background px-2 md:px-6 py-3 md:mx-2 text-[0.9rem] text-foreground/95 
-	dark:text-primary/75 font-light transition-colors
-  hover:text-accent-foreground dark:focus:text-primary
+  bg-background px-2 md:px-6 py-3 md:mx-2 text-[0.85rem] text-foreground/95 
+	dark:text-primary/75 font-medium transition-colors
+  hover:text-accent-foreground  dark:focus:text-primary
   focus:bg-background focus:text-accent-foreground focus:outline-none
   disabled:pointer-events-none disabled:opacity-50
   data-[active]:bg-background

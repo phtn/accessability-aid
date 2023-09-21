@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { Hero } from './body'
-import { BodyContainer, PanelContainer } from './styled'
+import { PanelContainer } from './styled'
 import {
 	Card,
 	CardContent,
@@ -10,22 +10,26 @@ import {
 	CardHeader,
 	CardTitle,
 } from '@/components/ui/card'
-import { Annoyed, Frown, HeartPulse, Laugh, Meh, Smile } from 'lucide-react'
+import { Annoyed, Frown, Laugh, Meh, Smile } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 import { useToast } from '@/components/ui/use-toast'
 import { ToastAction } from '@/components/ui/toast'
+import { LgContainer, OverlayContainer } from '@/app/styled'
 
 const Body = () => (
 	<>
-		<BodyContainer>
-			<Hero />
-			<div className='h-32'></div>
-		</BodyContainer>
+		<LgContainer>
+			<OverlayContainer>
+				<Hero />
+				<div className='h-32'></div>
+			</OverlayContainer>
+		</LgContainer>
 		<PanelContainer>
 			<QuickCheckUp />
-			<Card>
-				<Button onClick={() => {}}>toast</Button>
-			</Card>
+		</PanelContainer>
+
+		<PanelContainer>
+			<span>yo</span>
 		</PanelContainer>
 	</>
 )
@@ -42,13 +46,6 @@ const QuickCheckUp = () => {
 		})
 	}
 
-	// const handleOnPressSad = () => {
-	// 	toast({
-	// 		title: 'yo',
-	// 		description: 'lets fuck',
-	// 		action: <ToastAction altText='yeah'>fuck yeah!</ToastAction>,
-	// 	})
-	// }
 	return (
 		<Card className='py-3 px-6 transition-all duration-500 rounded-3xl bg-gradient-to-br from-accent to-secondary-foreground/50 hover:scale-110'>
 			<CardHeader>

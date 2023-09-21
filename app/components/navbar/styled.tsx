@@ -6,9 +6,9 @@ import tw from 'tailwind-styled-components'
 const NavbarContainer = tw.div`
   flex
   md:px-16
-  md:py-8
-  py-4
-  px-5
+  py-3
+  pr-5
+  pl-2
   items-center
   justify-between
 `
@@ -95,10 +95,29 @@ const ListContainer = tw.ul`
   overflow-hidden
 `
 
+const ListEmpty = tw.ul`
+  flex
+  lg:w-[600px]
+  md:w-[500]
+  md:grid-cols-2
+  p-4
+  w-[400]
+  overflow-hidden
+`
+
 // *  HOME  *
 
 const LogoContainer = tw.div`
-  md:w-full
+  md:w-24
+  md:h-24
+  h-16
+  w-16
+`
+
+const LogoContainerCover = tw.div`
+  w-32
+  h-32
+  ml-[-36px]
 `
 
 const BrandContainer = tw.div`
@@ -118,7 +137,7 @@ const CoverContent = tw.a`
   flex-col
   justify-end
   bg-gradient-to-b
-  from-secondary
+  from-secondary/50
   to-white
   dark:from-background
   dark:to-popover
@@ -126,6 +145,8 @@ const CoverContent = tw.a`
   outline-none
   focus:shadow-md
   p-6
+  lg:rounded-se-[0px]
+  rounded-[5px]
  `
 
 const LinkContent = tw.div`
@@ -141,7 +162,6 @@ const LinkContent = tw.div`
 `
 
 const LinkTitle = tw.h1`
-  mx-4
   font-bold
   text-md
 `
@@ -165,15 +185,6 @@ const BrandName = tw.h2`
   dark:text-card-foreground/75
   md:text-[1.6rem]
   leading-tight
-`
-
-const BrandSubtext = tw.h2`
-  font-light
-  text-[0.75rem]
-  md:text-[0.8rem]
-  leading-tight
-  text-secondary-foreground
-  dark:text-secondary-foreground/75
 `
 
 const List = tw.ul`
@@ -213,7 +224,6 @@ export {
 	BrandContainer,
 	BrandName,
 	BrandSection,
-	BrandSubtext,
 	Cover,
 	CoverContent,
 	Description,
@@ -221,9 +231,11 @@ export {
 	LinkContent,
 	LinkTitle,
 	List,
+	ListEmpty,
 	ListContainer,
 	LoginContainer,
 	LogoContainer,
+	LogoContainerCover,
 	Menubar,
 	MobileContainer,
 	ModeButton,

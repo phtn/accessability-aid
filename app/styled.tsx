@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button'
 import tw from 'tailwind-styled-components'
 
 type TextProps = {
@@ -48,18 +49,146 @@ const ListItemTitleText = tw.h1`
   font-bold
 `
 
+// *  SHARED  * //
+
+const Action = tw(Button)`
+  rounded-full
+  transition-all
+  hover:px-10
+  py-4
+  ease-out
+  duration-500
+  mb-12
+  xl:mb-0
+`
+
+const LgContainer = tw.div`
+  flex-1
+  rounded-sm
+  items-center
+  justify-center
+  px-0
+  pt-20
+  bg-gradient-to-br
+  bg-slate-100
+  from-secondary/25
+  to-background
+  dark:bg-slate-100/5
+  transition-all
+  ease-out
+  duration-1000
+`
+
+const LgContainerV2 = tw.div`
+  flex-1
+  rounded-sm
+  items-center
+  justify-center
+  px-0
+  pt-20
+  bg-gradient-to-br
+  bg-accent/75
+  from-accent/5
+  to-background
+  dark:bg-slate-100/5
+  dark:hover:bg-slate-100/10
+  transition-all
+  ease-in
+  duration-1000
+  transform-gpu
+`
+
+const LgContainerV3 = tw.div`
+  flex-1
+  rounded-sm
+  items-center
+  justify-center
+  px-0
+  pt-20
+  bg-gradient-to-br
+  bg-secondary/75
+  from-accent/5
+  to-background
+  dark:bg-slate-100/5
+  dark:hover:bg-slate-100/10
+  transition-all
+  ease-in
+  duration-1000
+  transform-gpu
+`
+
+const LgContent = tw.div`
+  flex-1
+  lg:px-40
+  lg:pb-56
+  xl:grid
+  xl:grid-cols-2
+  transition-all
+  duration-1000
+  lg:hover:px-[10.85%]
+`
+
+const LgContentV2 = tw.div`
+  flex-1
+  lg:px-40
+  lg:pb-72
+  xl:grid
+  xl:grid-cols-2
+  transition-all
+  duration-1000
+  lg:hover:px-[10.85%]
+`
+
+const LgContentV3 = tw.div`
+  flex-1
+  lg:px-40
+  lg:pb-96
+  xl:grid
+  xl:grid-cols-2
+  transition-all
+  duration-1000
+  lg:hover:px-[10.85%]
+`
+
+const LgContentRow = tw.div`
+  flex
+  flex-row
+`
+
+const OverlayContainer = tw.div`
+  bg-[url('/bottom-waves.svg')]
+  bg-no-repeat
+  bg-cover
+`
+
+const OverlayV2 = tw.div`
+  bg-[url('/waves-v4.svg')]
+  bg-no-repeat
+  bg-cover
+`
+
+const OverlayV5 = tw.div`
+  bg-[url('/waves-v6.svg')]
+  bg-no-repeat
+  bg-cover
+`
+
 export {
+	Action,
 	Container,
 	ListItemContent,
 	ListItemDescription,
 	ListItemPanel,
 	ListItemTitle,
 	ListItemTitleText,
+	LgContainer,
+	LgContainerV2,
+	LgContainerV3,
+	LgContent,
+	LgContentV2,
+	LgContentV3,
+	LgContentRow,
+	OverlayContainer,
+	OverlayV2,
+	OverlayV5,
 }
-
-const primary = '#90D1D4'
-const bright = '#A9EBEB'
-const secondary = '#0B5874'
-const text = '#063343'
-const dark = '#031b24'
-const accent = '#EFF4CC'

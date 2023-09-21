@@ -1,42 +1,13 @@
 import { Button } from '@/components/ui/button'
 import tw from 'tailwind-styled-components'
 
-// *  CONTENT * //
-
-const BodyContainer = tw.div`
-  flex-1
-  rounded-sm
-  items-center
-  justify-center
-  lg:px-40
-  md:p-24
-  px-0
-  pt-20
-  bg-gradient-to-br
-  bg-slate-100
-  from-secondary/25
-  to-background
-  dark:bg-slate-100/5
-  transition-all
-  ease-out
-  duration-1000
-`
-
 // *  HERO  * //
 
-const HeroContainer = tw.div`
-  flex-1
-  h-full
-  xl:grid
-  xl:grid-cols-2
-  transition-all
-  duration-1000
-  hover:p-1
-`
 const HeroPrimary = tw.div`
   xl:flex
   h-full
   w-full
+  py-10
   px-6
   xl:px-20
   lg:px-10
@@ -56,7 +27,7 @@ const HeroSecondary = tw.div`
   xl:scale-95
   hover:scale-100
   transform-gpu
-  duration-500
+  duration-1000
 `
 
 const HeroTitle = tw.h1`
@@ -74,7 +45,8 @@ const HeroSubtext = tw.h1`
   text-[1.15rem]
   md:text-[1.25rem]
   font-light
-  text-slate-400
+  text-slate-500
+  dark:text-slate-400
   my-10
   w-[90%]
   flex
@@ -104,12 +76,11 @@ const PanelContainer = tw.div`
   xl:grid-cols-3
   md:grid-cols-2
   gap-16
+  bg-primary-foreground
 `
 
 export {
-	BodyContainer,
 	Discover,
-	HeroContainer,
 	HeroPrimary,
 	HeroSecondary,
 	HeroSubtext,

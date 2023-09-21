@@ -10,6 +10,13 @@ import {
 	SearchCheckIcon,
 	BadgePercentIcon,
 	CalendarPlusIcon,
+	HeartHandIcon,
+	HeartPulseIcon,
+	PuzzleIcon,
+	OrbitIcon,
+	ShowerIcon,
+	PillIcon,
+	BusIcon,
 } from './icons'
 import { ColorModeProps } from './components/navbar/types'
 
@@ -23,45 +30,45 @@ const serviceLinks: LinkProps[] = [
 		icon: false,
 	},
 	{
-		alt: 'users',
+		alt: 'assistance',
 		avatar: '',
 		icon: true,
-		title: 'Our Staff',
+		title: 'Assistance',
 		href: '/',
-		description:
-			'Meet the Team behind scenes, working compassionately to bring your vision to life.',
+		description: 'Assistance with Daily Personal Activities - Standard.',
 	},
 	{
-		alt: 'reviews',
+		alt: 'community',
 		avatar: '',
 		icon: true,
-		title: 'Reviews',
+		title: 'Community',
 		href: '/',
-		description: 'See what others think about our quality of service.',
+		description: 'Increased Social and Community Participation.',
 	},
 	{
-		alt: 'enquire',
+		alt: 'household',
 		avatar: '',
 		icon: true,
-		title: 'Enquire',
+		title: 'Household',
 		href: '/',
-		description: 'Get answers today.',
+		description: 'Caring assistant to simplify your everyday life.',
 	},
 	{
-		alt: 'pricing',
+		alt: 'activities',
 		avatar: '',
 		icon: true,
-		title: 'Pricing',
+		title: 'Activities',
 		href: '/',
-		description: 'Check out our competitive pricing.',
+		description: 'Group and Centre based activities.',
 	},
 	{
-		alt: 'book',
+		alt: 'transport',
 		avatar: '',
 		icon: true,
-		title: 'Appointments',
-		href: '/appointments',
-		description: 'Schedule an appoinment with our expert.',
+		title: 'Transport',
+		href: '/transport',
+		description: 'Enhanced Mobility with your trusted travel companion.',
+		// description: 'Precision and care, ensuring your wellness.',
 	},
 ]
 
@@ -69,7 +76,7 @@ const careerLinks: LinkProps[] = [
 	{
 		alt: '',
 		avatar: '/ndis-logo-wide.svg',
-		title: 'Home Care',
+		title: 'Disability Support Worker',
 		href: '/ndis',
 		description: 'Get disability support based on your needs.',
 		icon: false,
@@ -136,7 +143,7 @@ const colorModes: ColorModeProps[] = [
 ]
 
 const listItemLinkClass =
-	'block select-none m-3 rounded-2xl p-6 leading-none no-underline outline-none transition-colors hover:bg-accent/50 dark:hover:bg-secondary/5 hover:text-accent-foreground hover:text-bold focus:bg-accent focus:text-accent-foreground'
+	'block select-none m-3 rounded-2xl p-6 leading-none no-underline outline-none transition-colors hover:bg-accent/50 dark:hover:bg-secondary/5 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
 
 const icons = new Map([
 	['users', <UsersIcon key='users' />],
@@ -146,6 +153,20 @@ const icons = new Map([
 	['enquire', <SearchCheckIcon key='enquire' />],
 	['pricing', <BadgePercentIcon key='pricing' />],
 	['book', <CalendarPlusIcon key='book' />],
+	['assistance', <HeartHandIcon key='assistance' />],
+	['nursing-care', <HeartPulseIcon key='nursing-care' />],
+	['activities', <PuzzleIcon key='activities' />],
+	['community', <OrbitIcon key='community' />],
+	['household', <ShowerIcon key='household' />],
+	['medication', <PillIcon key='medication' />],
+	['transport', <BusIcon key='transport' />],
 ])
 
 export { careerLinks, colorModes, icons, listItemLinkClass, serviceLinks }
+
+const primary = '#90D1D4'
+const bright = '#A9EBEB'
+const secondary = '#0B5874'
+const text = '#063343'
+const dark = '#031b24'
+const accent = '#EFF4CC'
