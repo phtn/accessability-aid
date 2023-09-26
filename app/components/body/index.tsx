@@ -31,14 +31,37 @@ const Body = () => (
 
 const QuickCheckUp = () => {
 	const handleOnPressHappy = () => {
-		console.log('test fire')
-		toast.success("Yay! Glad you're doing well.", {
+		toast("Yay! Glad you're doing well.", {
 			description: 'Would you like to talk to a person?',
 			duration: 10000,
 			action: {
 				label: 'Call',
 				onClick: () => window.open('tel:0415-8722-05'),
 			},
+			icon: <Laugh className='text-lime-600 pr-2 w-6 h-6' />,
+		})
+	}
+
+	const handleOnPressMeh = () => {
+		toast('No worries.', {
+			description: 'Talk to our experts.',
+			duration: 10000,
+			action: {
+				label: 'Call',
+				onClick: () => window.open('tel:0415-8722-05'),
+			},
+			icon: <Smile className='text-lime-600 pr-2 w-6 h-6' />,
+		})
+	}
+	const handleOnPressFrown = () => {
+		toast("We've all been there.", {
+			description: 'Do you need help?',
+			duration: 10000,
+			action: {
+				label: 'Yes',
+				onClick: () => window.open('tel:0415-8722-05'),
+			},
+			icon: <Smile className='text-lime-600 pr-2 w-6 h-6' />,
 		})
 	}
 
@@ -58,31 +81,23 @@ const QuickCheckUp = () => {
 					onClick={handleOnPressHappy}
 					variant='ghost'
 					size='icon'
-					className='hover:scale-110 rounded-full hover:bg-transparent transition-all duration-300'>
-					{/* <Laugh className='h-10 w-auto stroke-1' /> */}
+					className='hover:scale-110 rounded-full hover:bg-transparent transition-all duration-300 items-center justify-center flex'>
 					<span className='text-3xl rounded-full px-1'>😀</span>
 				</Button>
 				<Button
+					onClick={handleOnPressMeh}
+					size='icon'
 					variant='ghost'
-					className='hover:scale-125 transition-all duration-300'>
-					<Smile className='h-10 w-auto stroke-1' />
+					className='hover:scale-110 rounded-full hover:bg-transparent transition-all duration-300 items-center justify-center flex'>
+					<span className='text-3xl rounded-full px-1'>😐</span>
 				</Button>
 
 				<Button
+					onClick={handleOnPressFrown}
+					size='icon'
 					variant='ghost'
-					className='hover:scale-125 transition-all duration-300'>
-					<Meh className='h-10 w-auto stroke-1' />
-				</Button>
-				<Button
-					variant='ghost'
-					className='hover:scale-125 transition-all duration-300'>
-					<Annoyed className='h-10 w-auto stroke-1' />
-				</Button>
-				<Button
-					// onClick={handleOnPressSad}
-					variant='ghost'
-					className='hover:scale-125 transition-all duration-300'>
-					<Frown className='h-10 w-auto stroke-1' />
+					className='hover:scale-110 rounded-full hover:bg-transparent transition-all duration-300 items-center justify-center flex'>
+					<span className='text-3xl rounded-full px-1'>😔</span>
 				</Button>
 			</CardFooter>
 		</Card>

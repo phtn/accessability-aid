@@ -92,12 +92,16 @@ const Footer = () => {
 					</span>
 				</div>
 			</div>
-			<div className='text-xs text-secondary-foreground p-6 font-light'>
-				<span className='font-bold text-accent'>Access Ability Aid</span>{' '}
-				acknowledges the traditional custodians of australia and recognizes
-				their continuing connection to land, waters and community. We pay our
-				respect to them and their cultures and to past, present and emerging
-				elders.
+			<div className='text-xs text-secondary-foreground bg-secondary-foreground/10 p-6 font-light'>
+				<span className='font-medium text-lg text-accent'>
+					Acknowledgements
+				</span>
+				<br />
+				<br />
+				Access Ability Aid acknowledges the traditional custodians of Australia
+				and recognizes their continuing connection to land, waters and
+				community. We pay our respects to them and their cultures to past,
+				present, and emerging elders. ❤️
 			</div>
 		</Container>
 	)

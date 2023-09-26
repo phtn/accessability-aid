@@ -20,107 +20,14 @@ import {
 } from './icons'
 import { ColorModeProps } from './components/navbar/types'
 
-const serviceLinks: LinkProps[] = [
-	{
-		alt: '',
-		avatar: '/ndis-logo-wide.svg',
-		title: 'NDIS',
-		href: '/ndis',
-		description: 'Get disability support based on your needs.',
-		icon: false,
-	},
-	{
-		alt: 'assistance',
-		avatar: '',
-		icon: true,
-		title: 'Assistance',
-		href: '/',
-		description: 'Assistance with Daily Personal Activities - Standard.',
-	},
-	{
-		alt: 'community',
-		avatar: '',
-		icon: true,
-		title: 'Community',
-		href: '/',
-		description: 'Increased Social and Community Participation.',
-	},
-	{
-		alt: 'household',
-		avatar: '',
-		icon: true,
-		title: 'Household',
-		href: '/',
-		description: 'Caring assistant to simplify your everyday life.',
-	},
-	{
-		alt: 'activities',
-		avatar: '',
-		icon: true,
-		title: 'Activities',
-		href: '/',
-		description: 'Group and Centre based activities.',
-	},
-	{
-		alt: 'transport',
-		avatar: '',
-		icon: true,
-		title: 'Transport',
-		href: '/transport',
-		description: 'Enhanced Mobility with your trusted travel companion.',
-		// description: 'Precision and care, ensuring your wellness.',
-	},
-]
-
 const careerLinks: LinkProps[] = [
 	{
 		alt: '',
 		avatar: '/ndis-logo-wide.svg',
 		title: 'Disability Support Worker',
-		href: '/ndis',
+		href: '/',
 		description: 'Get disability support based on your needs.',
 		icon: false,
-	},
-	{
-		alt: 'users',
-		avatar: '',
-		icon: true,
-		title: 'Admin',
-		href: '/',
-		description:
-			'Meet the Team behind scenes, working compassionately to bring your vision to life.',
-	},
-	{
-		alt: 'reviews',
-		avatar: '',
-		icon: true,
-		title: 'Reviews',
-		href: '/Nurses',
-		description: 'See what others think about our quality of service.',
-	},
-	{
-		alt: 'enquire',
-		avatar: '',
-		icon: true,
-		title: 'Enquire',
-		href: '/',
-		description: 'Get answers today.',
-	},
-	{
-		alt: 'pricing',
-		avatar: '',
-		icon: true,
-		title: 'Care Givers',
-		href: '/',
-		description: 'Check out our competitive pricing.',
-	},
-	{
-		alt: 'book',
-		avatar: '',
-		icon: true,
-		title: 'IT Support',
-		href: '/',
-		description: 'Schedule an appoinment with our expert.',
 	},
 ]
 
@@ -162,7 +69,7 @@ const icons = new Map([
 	['transport', <BusIcon key='transport' />],
 ])
 
-export { careerLinks, colorModes, icons, listItemLinkClass, serviceLinks }
+export { careerLinks, colorModes, icons, listItemLinkClass }
 
 const primary = '#90D1D4'
 const bright = '#A9EBEB'

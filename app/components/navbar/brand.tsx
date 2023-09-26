@@ -87,7 +87,7 @@ const HomeMenu = () => {
 						<HomeCover />
 						<ListItem
 							alt='about'
-							href='/about-us'
+							href='/'
 							title='About Us'
 							icon>
 							<ActiveText>{`Meet our team →`}</ActiveText>
