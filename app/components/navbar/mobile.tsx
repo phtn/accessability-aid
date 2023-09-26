@@ -70,11 +70,11 @@ const MobileMenuSheet = () => {
 	const Services = () => (
 		<div>
 			{services.map((service) => (
-				<Link href={service.href}>
+				<Link
+					href={service.href}
+					key={service.title}>
 					<div
 						className={listItemLinkClass}
-						// alt={service.alt}
-						key={service.title}
 						title={service.title}
 
 						// avatarSrc={service.avatar}
