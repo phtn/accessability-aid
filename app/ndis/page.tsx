@@ -37,8 +37,8 @@ const Hero = () => (
 						<MoveRight className='ml-5 w-4' />
 					</Action>
 				</HeroPrimary>
-				<HeroSecondary>
-					<Blob>
+				<HeroSecondary className='items-center justify-center flex'>
+					<Blob className='h-56 w-56'>
 						<NDISTitle>ndis</NDISTitle>
 					</Blob>
 				</HeroSecondary>

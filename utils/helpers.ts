@@ -6,6 +6,14 @@ function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs))
 }
 
+function getFirstWord(str: string): string {
+	let words: string[] = []
+	if (str) {
+		words = str.split(' ')
+	}
+	return words[0]
+}
+
 function getInitials(name: string | undefined): string {
 	if (!name) return ''
 	const words = name.trim().split(' ')
@@ -31,4 +39,4 @@ function toggle(setState: Dispatch<SetStateAction<boolean>>): void {
 	setState((prevState) => !prevState)
 }
 
-export { cn, getInitials, map, toggle }
+export { cn, getFirstWord, getInitials, map, toggle }

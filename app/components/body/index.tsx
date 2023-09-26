@@ -12,9 +12,8 @@ import {
 } from '@/components/ui/card'
 import { Annoyed, Frown, Laugh, Meh, Smile } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
-import { useToast } from '@/components/ui/use-toast'
-import { ToastAction } from '@/components/ui/toast'
 import { LgContainer, OverlayContainer } from '@/app/styled'
+import { toast } from 'sonner'
 
 const Body = () => (
 	<>
@@ -27,27 +26,24 @@ const Body = () => (
 		<PanelContainer>
 			<QuickCheckUp />
 		</PanelContainer>
-
-		<PanelContainer>
-			<span>yo</span>
-		</PanelContainer>
 	</>
 )
 
 const QuickCheckUp = () => {
-	const { toast } = useToast()
-
 	const handleOnPressHappy = () => {
 		console.log('test fire')
-		toast({
-			title: "Yay! Glad you're doing well.",
+		toast.success("Yay! Glad you're doing well.", {
 			description: 'Would you like to talk to a person?',
-			action: <ToastAction altText='Yes'>Yes</ToastAction>,
+			duration: 10000,
+			action: {
+				label: 'Call',
+				onClick: () => window.open('tel:0415-8722-05'),
+			},
 		})
 	}
 
 	return (
-		<Card className='py-3 px-6 transition-all duration-500 rounded-3xl bg-gradient-to-br from-accent to-secondary-foreground/50 hover:scale-110'>
+		<Card className='border-0 py-3 px-6 transition-all duration-500 rounded-3xl bg-gradient-to-br from-secondary/25 to-background/50 dark:bg-slate-100/5'>
 			<CardHeader>
 				<CardTitle>Quick Check up</CardTitle>
 			</CardHeader>
@@ -61,8 +57,10 @@ const QuickCheckUp = () => {
 				<Button
 					onClick={handleOnPressHappy}
 					variant='ghost'
-					className='hover:scale-125 transition-all duration-300'>
-					<Laugh className='h-10 w-auto stroke-1' />
+					size='icon'
+					className='hover:scale-110 rounded-full hover:bg-transparent transition-all duration-300'>
+					{/* <Laugh className='h-10 w-auto stroke-1' /> */}
+					<span className='text-3xl rounded-full px-1'>😀</span>
 				</Button>
 				<Button
 					variant='ghost'

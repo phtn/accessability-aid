@@ -94,7 +94,7 @@ const HomeMenu = () => {
 						</ListItem>
 						<ListItem
 							alt='contact'
-							href='/contact-us'
+							href='tel:0415-8722-05'
 							title='Contact Us'
 							icon>
 							Get in touch with our support team.

@@ -32,7 +32,12 @@ const Hero = () => (
 					// 		onClick: () => console.log(null),
 					// 	},
 					// })
-					toast.success('Yay')
+					toast.success('Ready to talk to us?', {
+						action: {
+							label: 'Call',
+							onClick: () => window.open('tel:0415-8722-05'),
+						},
+					})
 				}
 				variant={'outline'}
 				size={'lg'}>

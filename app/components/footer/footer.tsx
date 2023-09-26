@@ -1,11 +1,13 @@
 'use client'
 import Image from 'next/image'
 import { Container } from './styled'
-import { Dices, MessagesSquare, Phone, Send, Spade } from 'lucide-react'
+import { Dices, MessagesSquare, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { QuoteProps, getQuotes } from '@/api/getQuotes'
 import { toast } from 'sonner'
+import { getFirstWord } from '@/utils/helpers'
 const logoOne = '/new-logo-aaa.svg'
+
 const Footer = () => {
 	const rollDice = async () => {
 		const quote: Promise<QuoteProps> = getQuotes()
@@ -15,17 +17,41 @@ const Footer = () => {
 			description: content,
 			duration: 10000,
 			action: {
-				label: tags[0],
+				label: getFirstWord(tags[0]),
 				onClick: () => getQuotes(),
+			},
+		})
+	}
+
+	const onPressChat = () => {
+		toast('Chat with us!', {
+			description: 'Chat feature available soon!',
+			duration: 10000,
+			action: {
+				label: 'Call',
+				onClick: () => window.open('tel:0415-8722-05'),
+			},
+		})
+	}
+
+	const onPressCall = () => {
+		toast('0415-8722-05', {
+			description: 'Ready to talk to us?',
+			duration: 10000,
+			action: {
+				label: 'Call',
+				onClick: () => window.open('tel:0415-8722-05'),
 			},
 		})
 	}
 
 	return (
 		<Container>
-			<div className='h-44 w-full p-4 grid grid-cols-6'>
+			<div className='h-44 w-full p-4 grid grid-cols-4'>
 				<div className='text-secondary items-center justify-center flex h-full'>
-					<div className='flex flex-row items-center'>
+					<Button
+						variant='ghost'
+						className='flex flex-row items-center'>
 						<Image
 							alt='aaa-logo'
 							src={logoOne}
@@ -33,40 +59,45 @@ const Footer = () => {
 							height={112}
 							className='w-10'
 						/>
-						<span className='text-accent text-[0.8rem] font-semibold tracking-wide'>
-							Access Ability Aid
-						</span>
-					</div>
+					</Button>
 				</div>
 				<div className=''>
-					<span className='text-secondary items-center justify-center flex h-full'>
+					<span className='text-background items-center justify-center flex h-full'>
 						<Button
+							variant='ghost'
 							size='icon'
 							onClick={rollDice}>
-							<Dices />
+							<Dices className='text-secondary' />
 						</Button>
 					</span>
 				</div>
 				<div className=''>
 					<span className='text-secondary items-center justify-center flex h-full'>
-						<MessagesSquare />
+						<Button
+							variant='ghost'
+							size='icon'
+							onClick={onPressChat}>
+							<MessagesSquare className='text-secondary' />
+						</Button>
 					</span>
 				</div>
 				<div className=''>
 					<span className='text-secondary items-center justify-center flex h-full'>
-						<Phone />
+						<Button
+							variant='ghost'
+							size='icon'
+							onClick={onPressCall}>
+							<Phone className='text-secondary' />
+						</Button>
 					</span>
 				</div>
-				<div className=''>
-					<span className='text-secondary items-center justify-center flex h-full'>
-						Our Mission
-					</span>
-				</div>
-				<div className=''>
-					<span className='text-secondary items-center justify-center flex h-full'>
-						Customer Support
-					</span>
-				</div>
+			</div>
+			<div className='text-xs text-secondary-foreground p-6 font-light'>
+				<span className='font-bold text-accent'>Access Ability Aid</span>{' '}
+				acknowledges the traditional custodians of australia and recognizes
+				their continuing connection to land, waters and community. We pay our
+				respect to them and their cultures and to past, present and emerging
+				elders.
 			</div>
 		</Container>
 	)
