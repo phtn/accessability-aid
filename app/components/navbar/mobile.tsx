@@ -16,7 +16,7 @@ import { useCallback } from 'react'
 
 const MobileMenuSheet = () => {
 	const { services, loading } = useFectch('services')
-	console.log('test mobile')
+
 	const Services = useCallback(
 		() => (
 			<div>

@@ -4,7 +4,6 @@ import {
 	DocumentData,
 	QuerySnapshot,
 	collection,
-	doc,
 	getDocs,
 } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
@@ -31,20 +30,16 @@ export const useFectch = (collectionPath: string) => {
 			const data = doc.data() as ServiceRanked
 			return data
 		})
-		const sorted = sortByRank(docs)
-		setServices(sorted)
+		setServices(sortByRank(docs))
 		setLoading(false)
 	}
 
 	useEffect(() => {
-		console.log('Fetch')
+		console.log('Effect')
 		setLoading(true)
 		const ref = collection(db, collectionPath)
-		const unsubscribe = getDocs(ref).then(onNext, onError)
-		return () => {
-			unsubscribe
-		}
-	}, [])
+		getDocs(ref).then(onNext, onError)
+	}, [collectionPath])
 
 	return { services, error, loading }
 }
