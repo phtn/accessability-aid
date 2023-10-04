@@ -12,25 +12,30 @@ import {
 import { listItemLinkClass } from '@/app/static'
 import Link from 'next/link'
 import { useFectch } from '@/api/getServices'
+import { useCallback } from 'react'
 
 const MobileMenuSheet = () => {
 	const { services, loading } = useFectch('services')
-
-	const Services = () => (
-		<div>
-			{services.map((service) => (
-				<Link
-					href={service.href}
-					key={service.title}>
-					<div
-						className={listItemLinkClass}
-						title={service.title}>
-						{service.title}
-					</div>
-				</Link>
-			))}
-		</div>
+	console.log('test mobile')
+	const Services = useCallback(
+		() => (
+			<div>
+				{services.map((service) => (
+					<Link
+						href={service.href}
+						key={service.title}>
+						<div
+							className={listItemLinkClass}
+							title={service.title}>
+							{service.title}
+						</div>
+					</Link>
+				))}
+			</div>
+		),
+		[services, loading]
 	)
+
 	return (
 		<Sheet>
 			<SheetTrigger asChild>

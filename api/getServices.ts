@@ -37,6 +37,7 @@ export const useFectch = (collectionPath: string) => {
 	}
 
 	useEffect(() => {
+		console.log('Fetch')
 		setLoading(true)
 		const ref = collection(db, collectionPath)
 		const unsubscribe = getDocs(ref).then(onNext, onError)

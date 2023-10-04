@@ -14,28 +14,29 @@ import { useFectch } from '@/api/getServices'
 const Services = () => {
 	const { services, loading } = useFectch('services')
 
+	console.log('test')
 	if (loading)
 		<ListEmpty>
 			<CompassIcon />
 			Getting Services ...
 		</ListEmpty>
+
 	return (
 		<NavigationMenuItem>
 			<NavigationMenuTrigger>Services</NavigationMenuTrigger>
 			<NavigationMenuContent>
 				<ListContainer>
-					{services &&
-						services.map((service, index) => (
-							<ListItem
-								alt={service.alt}
-								key={service.title}
-								title={service.title}
-								href={service.href}
-								avatarSrc={service.avatar}
-								icon={service.icon}>
-								{service.description}
-							</ListItem>
-						))}
+					{services.map((service, index) => (
+						<ListItem
+							alt={service.alt}
+							key={service.title}
+							title={service.title}
+							href={service.href}
+							avatarSrc={service.avatar}
+							icon={service.icon}>
+							{service.description}
+						</ListItem>
+					))}
 				</ListContainer>
 			</NavigationMenuContent>
 		</NavigationMenuItem>
