@@ -7,10 +7,9 @@ import {
 	HeroSubtext,
 	HeroTitle,
 } from './styled'
-import { MessageSquare, MoveRight } from 'lucide-react'
+import { MoveRight } from 'lucide-react'
 import { LgContent } from '@/app/styled'
 import { toast } from 'sonner'
-import Toasted from '../toasted'
 
 const Hero = () => (
 	<LgContent>
@@ -22,19 +21,9 @@ const Hero = () => (
 			</HeroSubtext>
 			<Discover
 				onClick={() =>
-					// toast.success('My Toasted friend', {
-					// 	className: 'bg-background text-foreground',
-					// 	description: 'It has been a minute.',
-					// 	duration: 5000,
-					// 	icon: <MessageSquare />,
-					// 	action: {
-					// 		label: 'Cancel',
-					// 		onClick: () => console.log(null),
-					// 	},
-					// })
 					toast.success('Ready to talk to us?', {
 						action: {
-							label: 'Call',
+							label: 'Call Us',
 							onClick: () => window.open('tel:0415-8722-05'),
 						},
 					})

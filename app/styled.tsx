@@ -126,6 +126,8 @@ const LgContent = tw.div`
   transition-all
   duration-1000
   lg:hover:px-[10.85%]
+  lg:h-[600px]
+  pb-[400px]
 `
 
 const LgContentV2 = tw.div`
@@ -137,6 +139,8 @@ const LgContentV2 = tw.div`
   transition-all
   duration-1000
   lg:hover:px-[10.85%]
+  lg:h-[600px]
+  pb-[400px]
 `
 
 const LgContentV3 = tw.div`
@@ -148,6 +152,8 @@ const LgContentV3 = tw.div`
   transition-all
   duration-1000
   lg:hover:px-[10.85%]
+  lg:h-[600px]
+  pb-[400px]
 `
 
 const LgContentRow = tw.div`

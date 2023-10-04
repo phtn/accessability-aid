@@ -1,72 +1,21 @@
-'use client'
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
 import { MobileContainer } from './styled'
 import { Button } from '@/components/ui/button'
-import { BadgeIcon } from '@/app/icons'
-import { LayoutGrid, User2Icon } from 'lucide-react'
+import { LayoutGrid } from 'lucide-react'
 import {
 	Sheet,
-	SheetClose,
 	SheetContent,
-	SheetDescription,
 	SheetFooter,
 	SheetHeader,
 	SheetTitle,
 	SheetTrigger,
 } from '@/components/ui/sheet'
-import { Label } from '@/components/ui/label'
-import { Input } from '@/components/ui/input'
-import { getServices } from '@/api/getServices'
-import { useEffect, useState } from 'react'
-import { LinkProps } from '@/app/types'
-import { ListItem } from '../components'
 import { listItemLinkClass } from '@/app/static'
 import Link from 'next/link'
-
-const MobileMenu = () => {
-	return (
-		<DropdownMenu>
-			<DropdownMenuTrigger asChild>
-				<Button
-					variant='ghost'
-					size='icon'>
-					<LayoutGrid className='text-secondary-foreground' />
-				</Button>
-			</DropdownMenuTrigger>
-			<DropdownMenuContent align='end'>
-				<DropdownMenuItem onClick={() => null}>
-					<BadgeIcon />
-					Our Services
-				</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => null}>
-					<BadgeIcon />
-					Our Place
-				</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => null}>
-					<BadgeIcon />
-					Call Us
-				</DropdownMenuItem>
-			</DropdownMenuContent>
-		</DropdownMenu>
-	)
-}
+import { useFectch } from '@/api/getServices'
 
 const MobileMenuSheet = () => {
-	const [services, setServices] = useState<LinkProps[]>([] as LinkProps[])
+	const { services, loading } = useFectch('services')
 
-	useEffect(() => {
-		getServices().then((snapshot) => {
-			const docs = snapshot.map((doc) => {
-				return doc as LinkProps
-			})
-			setServices(docs)
-		})
-	})
 	const Services = () => (
 		<div>
 			{services.map((service) => (
@@ -75,11 +24,7 @@ const MobileMenuSheet = () => {
 					key={service.title}>
 					<div
 						className={listItemLinkClass}
-						title={service.title}
-
-						// avatarSrc={service.avatar}
-						// icon={service.icon}
-					>
+						title={service.title}>
 						{service.title}
 					</div>
 				</Link>

@@ -1,26 +1,27 @@
 'use client'
 import Image from 'next/image'
 import { Container } from './styled'
-import { Dices, MessagesSquare, Phone } from 'lucide-react'
+import { Dices, HeartHandshake, MessagesSquare, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { QuoteProps, getQuotes } from '@/api/getQuotes'
+import { getQuotes } from '@/api/getQuotes'
 import { toast } from 'sonner'
 import { getFirstWord } from '@/utils/helpers'
 const logoOne = '/new-logo-aaa.svg'
 
 const Footer = () => {
-	const rollDice = async () => {
-		const quote: Promise<QuoteProps> = getQuotes()
-		const { author, content, tags } = await quote
-		console.log(tags[0])
-		return toast(author, {
-			description: content,
-			duration: 10000,
-			action: {
-				label: getFirstWord(tags[0]),
-				onClick: () => getQuotes(),
-			},
+	const rollDice = () => {
+		const quote = getQuotes().then((q) => {
+			const { author, content, tags } = q
+			toast(author, {
+				description: content,
+				duration: 10000,
+				action: {
+					label: getFirstWord(tags[0]),
+					onClick: () => getQuotes(),
+				},
+			})
 		})
+		return quote
 	}
 
 	const onPressChat = () => {
@@ -92,14 +93,15 @@ const Footer = () => {
 					</span>
 				</div>
 			</div>
-			<div className='text-xs text-secondary-foreground bg-secondary-foreground/10 p-6 font-light'>
-				<span className='font-medium text-lg text-accent'>
+			<div className='text-xs text-secondary-foreground bg-zinc-800 dark:bg-secondary-foreground/10 p-6 font-light'>
+				<span className='font-medium text-lg text-background dark:text-accent flex-row flex items-center'>
+					<HeartHandshake className='w-6 mr-3' />
 					Acknowledgements
 				</span>
 				<br />
 				<br />
 				Access Ability Aid acknowledges the traditional custodians of Australia
-				and recognizes their continuing connection to land, waters and
+				and recognises their continuing connection to land, waters and
 				community. We pay our respects to them and their cultures to past,
 				present, and emerging elders. ❤️
 			</div>

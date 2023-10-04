@@ -1,5 +1,3 @@
-'use client'
-
 import { MoveRight } from 'lucide-react'
 import {
 	HeroPrimary,
@@ -7,17 +5,8 @@ import {
 	HeroSubtext,
 	HeroTitle,
 } from '../components/body/styled'
-import {
-	Action,
-	LgContainer,
-	LgContainerV2,
-	LgContent,
-	LgContentV2,
-	OverlayContainer,
-	OverlayV2,
-} from '../styled'
+import { Action, LgContainerV2, LgContentV2, OverlayV2 } from '../styled'
 import { Blob, NDISTitle } from './styled'
-import { Panel } from '../components/components'
 
 const Hero = () => (
 	<LgContainerV2>
@@ -51,9 +40,6 @@ const NDIS = () => {
 	return (
 		<>
 			<Hero />
-			{/* <Panel>
-				<span>yo</span>
-			</Panel> */}
 		</>
 	)
 }

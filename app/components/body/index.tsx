@@ -10,7 +10,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from '@/components/ui/card'
-import { Annoyed, Frown, Laugh, Meh, Smile } from 'lucide-react'
+import { Laugh, Smile } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 import { LgContainer, OverlayContainer } from '@/app/styled'
 import { toast } from 'sonner'
@@ -35,7 +35,7 @@ const QuickCheckUp = () => {
 			description: 'Would you like to talk to a person?',
 			duration: 10000,
 			action: {
-				label: 'Call',
+				label: 'Call Us',
 				onClick: () => window.open('tel:0415-8722-05'),
 			},
 			icon: <Laugh className='text-lime-600 pr-2 w-6 h-6' />,
@@ -47,7 +47,7 @@ const QuickCheckUp = () => {
 			description: 'Talk to our experts.',
 			duration: 10000,
 			action: {
-				label: 'Call',
+				label: 'Call Us',
 				onClick: () => window.open('tel:0415-8722-05'),
 			},
 			icon: <Smile className='text-lime-600 pr-2 w-6 h-6' />,

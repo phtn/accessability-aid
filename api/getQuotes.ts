@@ -11,7 +11,7 @@ export type QuoteProps = {
 	_id: string
 }
 
-export async function getQuotes(): Promise<QuoteProps> {
+export function getQuotes(): Promise<QuoteProps> {
 	const url = 'https://api.quotable.io/quotes/random'
 
 	return axios.get(url).then((response) => {

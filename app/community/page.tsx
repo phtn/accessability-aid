@@ -1,5 +1,3 @@
-'use client'
-
 import { MoveRight } from 'lucide-react'
 import {
 	HeroPrimary,
@@ -7,19 +5,7 @@ import {
 	HeroSubtext,
 	HeroTitle,
 } from '../components/body/styled'
-import {
-	Action,
-	LgContainer,
-	LgContainerV2,
-	LgContent,
-	LgContentRow,
-	LgContentV2,
-	LgContentV3,
-	OverlayContainer,
-	OverlayV2,
-	OverlayV5,
-} from '../styled'
-import { Panel } from '../components/components'
+import { Action, LgContainerV2, LgContentV2, OverlayV5 } from '../styled'
 import Image from 'next/image'
 
 const Hero = () => (
